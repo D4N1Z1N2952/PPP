@@ -1,0 +1,27 @@
+// - Start of a comment in C/C++
+Function - A piece of code with a name that can be executed. It can take arguments and return some type of value
+Output - The information, result, or data a program sends out to the external world after processing
+Compiler - An program used for translating human-readable source code(e.g. a .cpp file) to a machine language file called object-code (e.g. in linux it is a .o file)
+Error - A mistake or flaw in the code or logic that causes a program to behave unexpectedly, produce incorrect results, or crash
+Linker - A program that combines two or more object files(e.g. when you write a Hello, World program that uses the iostream library, the linker combines the iostram.o and hello_world.o)
+command line - An I/O that you can write commands, and it retrieves output
+Executable - An machine code file that can be interpreted by a computer tha is the output of a compiled and linked program
+Object-code - The result of a compiled but not linked program
+Comment - An piece of text to help the humans understand the source code better. It is ignored by the compiler and not used by the computer
+import - keyword in C++ to use a module(e.g. import std)
+Library - An piece of source code that was written by other people to be used by other people, e.g., the C++ standard library
+module - It is a C++ modern replacement for header files, offering improved compilation times, better code organization, and stronger encapsulation
+Bug - an error, flaw, or fault in code that causes a program to behave unexpectedly, produce incorrect results, or crash
+main() - Obligatory function in every C/C++ program that is the entry point of the program
+C++ - A C-like programming language created by Bjarne Stroustrup in the late 1970s
+IDE - Integrated Devlopment Enviroment, a powerful text editor with tools like debuggers, compilers, linkers... e.g. Visual Studio, CLion
+Source-Code - Human readable code that can be compiled linked an executed by a computer
+Instruction - A single, low-level command telling a computer's processor to perform a specific action
+#include - Directive in C/C++ that is used for adding header files to the program
+Debugging - The systematic process of finding and fixing errors, or "bugs," in software code to ensure the program runs correctly and produces the expected output
+<< - Stream inserting operator in C++
+Header file - A vital tool for organizing code by separating declarations (interfaces) from definitions (implementations)
+Program - Sequence of instructions telling a computer to perform a task, like a recipe, written in a programming language that can be compiled to be understood by an computer
+Compilation - The process of the transformation of an human readable source code into an object code that is in machine language
+cout - a predefined object used for standard output, which is typically the console or screen
+std - an abbreviation for "standard" and refers to the std namespace, which contains all the identifiers (functions, classes, objects, and types) that make up the C++ Standard Library
