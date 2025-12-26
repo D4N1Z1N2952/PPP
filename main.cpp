@@ -3,25 +3,23 @@
 int main() {
     string previous;
     string current;
-    int repeated = 0;
+    int word_number = 0;
     while (cin>>current) {
+        word_number++;
         if (previous==current) {
-            cout << "Repeated word: " << current << '\n';
-            repeated++;
+            cout << "Word number: " << word_number << " - Repeated word: " << current << '\n';
         }
         previous = current;
     }
     /* First try me:
     * input:  The cat cat jumped
-    * output: Repeated word: cat
-    *         repeated = 1
+    * output: Word number: 3 - Repeated word: cat
     */
     /* Second try me:
     * input: She she laughed "he he he!" because what he did did not looked too too good good
-    * output: Repeated word: did
-    *         Repeated word: too
-    *         Repeated word: good
-    *         repeated = 3
+    * output: Word number: 11 - Repeated word: did
+    *         Word number: 15 - Repeated word: too
+    *         Word number: 17 - Repeated word: good
     */
 
 }
