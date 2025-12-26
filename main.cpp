@@ -1,25 +1,22 @@
 #include "PPPheaders.h"
 
-int main() {
-    string previous;
-    string current;
-    int word_number = 0;
-    while (cin>>current) {
-        word_number++;
-        if (previous==current) {
-            cout << "Word number: " << word_number << " - Repeated word: " << current << '\n';
-        }
-        previous = current;
-    }
-    /* First try me:
-    * input:  The cat cat jumped
-    * output: Word number: 3 - Repeated word: cat
+int Main() {
+    STRING s = "Goodbye,  cruel world! ";
+    cOut << S << '\n';
+    /*
+    * Users/gnti/Everything/Programming/C++/PPP/main.cpp:4:5: error: unknown type name 'STRING'
+    * 4 |     STRING s = "Goodbye,  cruel world! ";
+    *   |     ^
+    * /Users/gnti/Everything/Programming/C++/PPP/main.cpp:5:5: error: use of undeclared identifier 'cOut'; did you mean 'cout'?
+    *   5 |     cOut << S << '\n';
+    *     |     ^~~~
+    *     |     cout
+    * /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream:57:42: note: 'cout' declared here
+    *  57 | extern _LIBCPP_EXPORTED_FROM_ABI ostream cout;
+    *     |                                          ^
+    * /Users/gnti/Everything/Programming/C++/PPP/main.cpp:5:13: error: use of undeclared identifier 'S'
+    *   5 |     cOut << S << '\n';
+    *     |             ^
+    * 3 errors generated.
     */
-    /* Second try me:
-    * input: She she laughed "he he he!" because what he did did not looked too too good good
-    * output: Word number: 11 - Repeated word: did
-    *         Word number: 15 - Repeated word: too
-    *         Word number: 17 - Repeated word: good
-    */
-
 }
