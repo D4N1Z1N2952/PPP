@@ -28,4 +28,5 @@ int main() {
     }else if (age >= 70) {
         cout << "\tAre you retiring?\n";
     }
+    cout << "Sincerely,\n\nDaniel"; // Add your name here
 }
