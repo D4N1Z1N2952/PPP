@@ -1,20 +1,22 @@
 #include "PPPheaders.h"
 
 int main() {
-    double val1;
-    double val2;
-    std::cout << "Write both floating point values: ";
-    std::cin >> val1 >> val2;
-    if (val1>val2) {
-        std::cout << val1 << " is bigger than " << val2 << '\n';
-    } else if (val2>val1) {
-        std::cout << val2 << " is bigger than " << val1 << '\n';
-    } else {
-        std::cout << "Both " << val1 << " and " << val2 << " are equal" << '\n';
-    }
+    int v1, v2, v3;
+    std::cout << "Enter three values: ";
+    std::cin >> v1 >> v2 >> v3;
+    std::cout << v1 << ", " << v2 << " and " << v3 << '\n';
 
-    std::cout << "The sum of both values is:             " << val1 + val2 << '\n';
-    std::cout << "The difference between both values is: " << val1 - val2 << '\n';
-    std::cout << "The product between both values is:    " << val1 * val2 << '\n';
-    std::cout << "The ratio between both numbers is:     " << val1 / val2 << '\n';
+    if (v1 >= v2 && v2 >= v3) {        // v3 v2 v1
+        std::cout << v3 << " " << v2 << " " << v1;
+    } else if (v3 >= v2 && v2 >= v1) { // v1 v2 v3
+        std::cout << v1 << " " << v2 << " " << v3;
+    } else if (v3 >= v1 && v1 >= v2) { // v2 v1 v3
+        std::cout << v2 << " " << v1 << " " << v3;
+    } else if (v1 >= v3 && v3 >= v2) { // v2 v3 v1
+        std::cout << v2 << " " << v3 << " " << v1;
+    } else if (v2 >= v3 && v3 >= v1) { // v1 v3 v2
+        std::cout << v1 << " " << v3 << " " << v2;
+    } else if (v2 >= v1 && v1 >= v3) { // v3 v1 v2
+        std::cout << v3 << " " << v1 << " " << v2;
+    }
 }
