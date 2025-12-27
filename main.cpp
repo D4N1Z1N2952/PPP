@@ -1,12 +1,20 @@
 #include "PPPheaders.h"
 
 int main() {
-    int num = 0;
+    string in;
     std::cout << "Enter the number: ";
-    std::cin >> num;
-    if (num % 2 == 0) {
-        std::cout << "Number" << num << "is even";
+    std::cin >> in;
+    if (in=="zero") {
+        std::cout << 0;
+    } else if (in=="one") {
+        std::cout << 1;
+    } else if (in=="two") {
+        std::cout << 2;
+    } else if (in=="three") {
+        std::cout << 3;
+    } else if (in=="four") {
+        std::cout << 4;
     } else {
-        std::cout << "Number " << num << " is odd";
+        std::cout << "I don't know this number!";
     }
 }
