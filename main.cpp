@@ -19,5 +19,13 @@ int main() {
     if (age <= 0 || age >= 110) {
         error("You're kidding me!");
     }
-    cout << "\tI heard it was your birthday and now you're " << age << " years old";
+    cout << "\tI heard it was your birthday and now you're " << age << " years old!\n";
+
+    if (age < 12) {
+        cout << "\tNext year you will be " << age + 1 << " years old.\n";
+    } else if (age == 17) {
+        cout << "\tNext year you'll have to vote.\n";
+    }else if (age >= 70) {
+        cout << "\tAre you retiring?\n";
+    }
 }
