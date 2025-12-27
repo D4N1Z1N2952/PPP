@@ -1,20 +1,18 @@
 #include "PPPheaders.h"
 
 int main() {
-    string in;
-    std::cout << "Enter the number: ";
-    std::cin >> in;
-    if (in=="zero") {
-        std::cout << 0;
-    } else if (in=="one") {
-        std::cout << 1;
-    } else if (in=="two") {
-        std::cout << 2;
-    } else if (in=="three") {
-        std::cout << 3;
-    } else if (in=="four") {
-        std::cout << 4;
-    } else {
-        std::cout << "I don't know this number!";
+    string operation;
+    double n1 = 0;
+    double n2 = 0;
+    std::cout << "Enter operator, num1, num2 (e.g. + 4 5): ";
+    std::cin >> operation >> n1 >> n2;
+    if (operation=="+" || operation=="sum") {
+        std::cout << n1 + n2;
+    } else if (operation=="-" || operation=="sub") {
+        std::cout << n1 - n2;
+    } else if (operation=="*" || operation=="mul") {
+        std::cout << n1 * n2;
+    } else if (operation=="/" || operation=="div") {
+        std::cout << n1 / n2;
     }
 }
