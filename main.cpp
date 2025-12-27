@@ -1,9 +1,9 @@
 #include "PPPheaders.h"
 
 int main() {
-    int val1;
-    int val2;
-    std::cout << "Write both values: ";
+    double val1;
+    double val2;
+    std::cout << "Write both floating point values: ";
     std::cin >> val1 >> val2;
     if (val1>val2) {
         std::cout << val1 << " is bigger than " << val2 << '\n';
