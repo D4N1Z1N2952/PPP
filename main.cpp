@@ -1,10 +1,8 @@
 #include "PPPheaders.h"
 
 int main () {
-  int i = 0;
-  while (i<=25) {
-    std::cout << char(97 + i) << "\t" << i + 97 << '\n';
-    ++i;
+  for (int i = 0; i <= 25; i++) {
+    std::cout << char(97 + i) << "\t" << 97 + i << '\n';
   }
   return 0;
 }
