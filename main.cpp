@@ -1,8 +1,12 @@
 #include "PPPheaders.h"
 
-int main () {
-  for (int i = 0; i <= 25; i++) {
-    std::cout << char(97 + i) << "\t" << 97 + i << '\n';
-  }
+int square (int num);
+
+int main (int argc, char *argv[]) {
+  std::cout << square(6) << '\n';
   return 0;
+}
+
+int square (int num) {
+  return num*num;
 }
