@@ -9,15 +9,21 @@ int main() {
     double value = 0;
     char type = ' ';
     cin >> value >> type;
-    if (type=='y') {
+    
+    switch (type) {
+      case 'y':
         value *= dollar2iene;
-    } else if (type=='r') {
-        value *= dollar2reais;
-    } else if (type=='p') {
+        break;
+      case 'p':
         value *= dollar2pound;
-    } else {
-        cout << "Unknow type";
-        return -1;
+        break;
+      case 'r':
+        value *= dollar2reais;
+        break;
+      default:
+        cout << "Unknow value" << '\n';
+        break;
     }
+
     cout << "THe conveted value is: " << value << type;
 }
