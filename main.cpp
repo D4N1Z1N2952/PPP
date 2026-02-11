@@ -7,7 +7,13 @@ int main () {
 
   while (cin >> i1) {
     while (cin >> i2) {
-      cout << "first int: " << i1 << " second int: " << i2 << '\n';
+      if (i1 > i2) {
+        cout << "The biggest number is: " << i1 << '\n';
+        cout << "The smallest number is: " << i2 << '\n';
+      } else {
+        cout << "The biggest number is: " << i2 << '\n';
+        cout << "The smallest number is: " << i1 << '\n';
+      }
     }
   }
 
