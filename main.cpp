@@ -1,24 +1,13 @@
 #include "PPPheaders.h"
 
 int main () {
-  vector<string> dont_like = {"Brocolli", "eggplant", "spinach"};
-  vector<string> v;
 
-  for (string s; cin >> s;)
-    v.push_back(s);
+  int i1;
+  int i2;
 
-  for (int i = 0; i < v.size(); i++) {
-    bool found = false;
-    for (int j = 0; j < dont_like.size(); j++) {
-      if (v[i] == dont_like[j]) {
-        found = true;
-        break;
-      }
-    }
-    if(found) {
-        cout << "BEEP\n";
-    } else {
-        cout << v[i] << '\n';
+  while (cin >> i1) {
+    while (cin >> i2) {
+      cout << "first int: " << i1 << " second int: " << i2 << '\n';
     }
   }
 
