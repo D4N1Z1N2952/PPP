@@ -10,9 +10,11 @@ int main () {
       if (i1 > i2) {
         cout << "The biggest number is: " << i1 << '\n';
         cout << "The smallest number is: " << i2 << '\n';
-      } else {
+      } else if (i2 > i1){
         cout << "The biggest number is: " << i2 << '\n';
         cout << "The smallest number is: " << i1 << '\n';
+      } else {
+        cout << "Both numbers are equal" << '\n';
       }
     }
   }
