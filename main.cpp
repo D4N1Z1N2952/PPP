@@ -2,8 +2,8 @@
 
 int main () {
 
-  int i1;
-  int i2;
+  double i1;
+  double i2;
 
   while (cin >> i1) {
     while (cin >> i2) {
