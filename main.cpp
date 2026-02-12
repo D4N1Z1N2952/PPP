@@ -2,24 +2,27 @@
 
 int main () {
 
-  double i1;
-  double i2;
+  double d;
 
-  while (cin >> i1) {
-    while (cin >> i2) {
-      if (i1 > i2) {
-        cout << "The biggest number is: " << i1 << '\n';
-        cout << "The smallest number is: " << i2 << '\n';
-        if ((i1 - i2) < 1.0) {
-          cout << "The numbers are almost equal" << '\n';
-        }
-      } else if (i2 > i1){
-        cout << "The biggest number is: " << i2 << '\n';
-        cout << "The smallest number is: " << i1 << '\n';
-        cout << "The numbers are almost equal" << '\n';
-      } else {
-        cout << "Both numbers are equal" << '\n';
-      }
+  double biggest = 0;
+  double smallest = 2 << sizeof(double);
+  
+  if (!(cin >> d)) {
+    cout << "Invalid input" << '\n';
+    return 1;
+  }
+
+  std::cout << d << " is the biggest number so far" << '\n';
+  std::cout << d << " is the smallest number so far" << '\n';
+
+  while (cin >> d) {
+
+    if (d > biggest) {
+      cout << d << " is the biggest number so far" << '\n';
+      biggest = d;
+    } else if (d < smallest) {
+      cout << d << " is the smallest number so far" << '\n';
+      smallest = d;
     }
   }
 
