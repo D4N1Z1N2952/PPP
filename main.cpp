@@ -6,6 +6,7 @@ const double pol = 2.54;
 const double ft = 12 * pol;
 
 double unit2cm(double d, string s);
+bool testUnit(string s);
 
 int main () {
 
@@ -18,17 +19,27 @@ int main () {
     return 1;
   }
 
+  if (!(testUnit(s))) {
+      cout << "Invalid unit" << '\n';
+      return 1;
+  }
+
   double biggest = unit2cm(d, s);
   double smallest = unit2cm(d, s);
 
- cout << biggest << " is the biggest number so far" << '\n';
- cout << smallest << " is the smallest number so far" << '\n';
+  cout << biggest << " is the biggest number so far" << '\n';
+  cout << smallest << " is the smallest number so far" << '\n';
 
   double convert = 0;
 
   while (b) {
     if (!(cin >> d >> s)) {
       cout << "Invalid input" << '\n';
+      return 1;
+    }
+
+    if (!(testUnit(s))) {
+      cout << "Invalid unit" << '\n';
       return 1;
     }
 
@@ -57,5 +68,19 @@ double unit2cm(double d, string s) {
     return d;
   } else {
     return d;
+  }
+}
+
+bool testUnit(string s) {
+  if (s != "pol") {
+    return false;
+  } else if (s != "cm") {
+    return false;
+  } else if (s != "ft") {
+    return false;
+  } else if (s != "m") {
+    return false;
+  } else {
+    return true;
   }
 }
