@@ -13,16 +13,18 @@ int main () {
   double d = 0;
   string s = "";
   double sum = 0;
+  vector<double> vd;
+  vector<string> vs;
 
   if (!(cin >> d >> s)) {
     cout << "Invalid input" << '\n';
     return 1;
   }
 
-  //if (!(testUnit(s))) {
-  //    cout << "Invalid unit" << '\n';
-  //    return 1;
-  //}
+  if (!(testUnit(s))) {
+      cout << "Invalid unit" << '\n';
+      return 1;
+  }
 
   double biggest = unit2cm(d, s);
   double smallest = unit2cm(d, s);
@@ -53,12 +55,21 @@ int main () {
       smallest = convert;
     }
     sum += convert;
+
+    vd.push_back(d);
+    vs.push_back(s);
   }
 
   cout << "The biggest number is: " << biggest << '\n';
   cout << "The smallest number is: " << smallest << '\n';
 
   cout << "The total sum is: " << sum << '\n';
+
+  cout << "All the numbers entered are: " << '\n';
+  for (int i = 0; i < vd.size(); i++) {
+    cout << '\t' << vd[i] << vs[i] << '\n';
+  }
+  
 
   return 0;
 }
