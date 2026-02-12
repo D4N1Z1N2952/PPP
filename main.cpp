@@ -3,14 +3,14 @@
 int main () {
 
   double d;
-
-  double biggest = 0;
-  double smallest = 2 << sizeof(double);
   
   if (!(cin >> d)) {
     cout << "Invalid input" << '\n';
     return 1;
   }
+
+  double biggest = d;
+  double smallest = d;
 
   std::cout << d << " is the biggest number so far" << '\n';
   std::cout << d << " is the smallest number so far" << '\n';
