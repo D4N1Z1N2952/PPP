@@ -11,18 +11,18 @@ bool testUnit(string s);
 int main () {
 
   double d = 0;
-  bool b = true;
   string s = "";
+  double sum = 0;
 
   if (!(cin >> d >> s)) {
     cout << "Invalid input" << '\n';
     return 1;
   }
 
-  if (!(testUnit(s))) {
-      cout << "Invalid unit" << '\n';
-      return 1;
-  }
+  //if (!(testUnit(s))) {
+  //    cout << "Invalid unit" << '\n';
+  //    return 1;
+  //}
 
   double biggest = unit2cm(d, s);
   double smallest = unit2cm(d, s);
@@ -32,15 +32,15 @@ int main () {
 
   double convert = 0;
 
-  while (b) {
+  while (true) {
     if (!(cin >> d >> s)) {
       cout << "Invalid input" << '\n';
-      return 1;
+      break;
     }
 
     if (!(testUnit(s))) {
       cout << "Invalid unit" << '\n';
-      return 1;
+      break;
     }
 
     convert = unit2cm(d, s);
@@ -52,7 +52,13 @@ int main () {
       cout << convert << " is the smallest number so far" << '\n';
       smallest = convert;
     }
+    sum += convert;
   }
+
+  cout << "The biggest number is: " << biggest << '\n';
+  cout << "The smallest number is: " << smallest << '\n';
+
+  cout << "The total sum is: " << sum << '\n';
 
   return 0;
 }
@@ -72,15 +78,15 @@ double unit2cm(double d, string s) {
 }
 
 bool testUnit(string s) {
-  if (s != "pol") {
-    return false;
-  } else if (s != "cm") {
-    return false;
-  } else if (s != "ft") {
-    return false;
-  } else if (s != "m") {
-    return false;
-  } else {
+  if (s == "pol") {
     return true;
+  } else if (s == "cm") {
+    return true;
+  } else if (s == "ft") {
+    return true;
+  } else if (s == "m") {
+    return true;
+  } else {
+    return false;
   }
 }
