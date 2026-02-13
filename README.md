@@ -45,7 +45,7 @@ To compile the C++ files in this project, you can use a C++ compiler such as `cl
 The following command provides an example of how to compile a C++ file:
 
 ```bash
-clang++ -std=c++11 -Iinclude "chapter <chapter_number>/<file_name>.cpp" -o <output_file_name>
+clang++ -std=c++23 -Iinclude "chapter <chapter_number>/<file_name>.cpp" -o <output_file_name>
 ```
 
 Remember to replace `<chapter_number>`, `<file_name>`, and `<output_file_name>` with the appropriate values.
@@ -55,7 +55,7 @@ Remember to replace `<chapter_number>`, `<file_name>`, and `<output_file_name>` 
 To compile `exercise 1.cpp` from `chapter 1` and create an executable named `exercise1`, you would run the following command:
 
 ```bash
-clang++ -std=c++11 -Iinclude "chapter 1/exercise 1.cpp" -o exercise1
+clang++ -std=c++23 -Iinclude "chapter 1/exercise 1.cpp" -o exercise1
 ```
 
 You can use `g++` in place of `clang++` if you prefer.
