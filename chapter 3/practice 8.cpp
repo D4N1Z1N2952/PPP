@@ -1,3 +1,5 @@
+// Practice 3.8 (page 78)
+
 #include "PPPheaders.h"
 
 // m, pol and ft to cm
@@ -11,10 +13,8 @@ bool testUnit(string s);
 int main () {
 
   double d = 0;
+  bool b = true;
   string s = "";
-  double sum = 0;
-  vector<double> vd;
-  vector<string> vs;
 
   if (!(cin >> d >> s)) {
     cout << "Invalid input" << '\n';
@@ -34,15 +34,15 @@ int main () {
 
   double convert = 0;
 
-  while (true) {
+  while (b) {
     if (!(cin >> d >> s)) {
       cout << "Invalid input" << '\n';
-      break;
+      return 1;
     }
 
     if (!(testUnit(s))) {
       cout << "Invalid unit" << '\n';
-      break;
+      return 1;
     }
 
     convert = unit2cm(d, s);
@@ -54,22 +54,7 @@ int main () {
       cout << convert << " is the smallest number so far" << '\n';
       smallest = convert;
     }
-    sum += convert;
-
-    vd.push_back(d);
-    vs.push_back(s);
   }
-
-  cout << "The biggest number is: " << biggest << '\n';
-  cout << "The smallest number is: " << smallest << '\n';
-
-  cout << "The total sum is: " << sum << '\n';
-
-  cout << "All the numbers entered are: " << '\n';
-  for (int i = 0; i < vd.size(); i++) {
-    cout << '\t' << vd[i] << vs[i] << '\n';
-  }
-  
 
   return 0;
 }
@@ -89,15 +74,15 @@ double unit2cm(double d, string s) {
 }
 
 bool testUnit(string s) {
-  if (s == "pol") {
-    return true;
-  } else if (s == "cm") {
-    return true;
-  } else if (s == "ft") {
-    return true;
-  } else if (s == "m") {
-    return true;
-  } else {
+  if (s != "pol") {
     return false;
+  } else if (s != "cm") {
+    return false;
+  } else if (s != "ft") {
+    return false;
+  } else if (s != "m") {
+    return false;
+  } else {
+    return true;
   }
 }

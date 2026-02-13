@@ -2,22 +2,63 @@
 
 This repository is disposable for holding the answers to the exercises, practice and "Try this" sections from the Bjarne Stroustrup's book Programming Principles and practice using C++ (third edition).
 
-All answers are in the main.cpp file, after each exercise a commit is done, so for finding answers for exercises go to the commit list and search for the specific exercise. **Note that the commit order is the same order the exercises are shown in the book.**  
+Each exercise, practice, or "Try this" has its own `.cpp` file. The files are organized into chapters.
+
+## Project Structure
+
+The project is organized by chapters. Inside each chapter's directory, you'll find the solutions for the exercises, practices, and "Try this" sections.
+
+```
+/Users/danielgp/Projects/PPP/
+├───.gitignore
+├───glossary.txt
+├───README.md
+├───.git/...
+├───.vscode/
+│   └───settings.json
+├───build/
+│   ├───.cmake/...
+│   └───CMakeFiles/...
+├───chapter 1/
+│   ├───exercise 1.cpp
+│   ├───exercise 2.cpp
+│   └───...
+├───chapter 2/
+│   ├───exercise 10.cpp
+│   ├───exercise 11.cpp
+│   └───...
+├───chapter 3/
+│   ├───practice 1.cpp
+│   ├───practice 10.cpp
+│   └───...
+└───include/
+    ├───PPP_support.h
+    └───PPPheaders.h
+```
+
+To find a specific file, navigate to the chapter's folder and look for the corresponding file. For example, the solution for "Chapter 3, Practice 2" would be in `chapter 3/practice 2.cpp`.
 
 ## Building
-This is a Cmake-based project that doesn't require any external libraries.
 
-### MacOS/Linux
+To compile the C++ files in this project, you can use a C++ compiler such as `clang++` or `g++`. The `-I` flag is required to ensure the compiler can locate the necessary header files from the `include` directory.
+
+The following command provides an example of how to compile a C++ file:
+
 ```bash
-    mkdir build
-    cd build
-    cmake ..
-    make
+clang++ -std=c++11 -Iinclude "chapter <chapter_number>/<file_name>.cpp" -o <output_file_name>
 ```
-This guide is using the default generator: Makefiles, if you prefer, you can change it.
 
-### Windows
-There isn't a guide on how to build for windows yet. It will be added later.
+Remember to replace `<chapter_number>`, `<file_name>`, and `<output_file_name>` with the appropriate values.
+
+### Example
+
+To compile `exercise 1.cpp` from `chapter 1` and create an executable named `exercise1`, you would run the following command:
+
+```bash
+clang++ -std=c++11 -Iinclude "chapter 1/exercise 1.cpp" -o exercise1
+```
+
+You can use `g++` in place of `clang++` if you prefer.
 
 ## Acknowledgments
 I wanted to express my deep appreciation for the amazing Bjarne Stroustrup's book, Programming principles and practice using C++.
