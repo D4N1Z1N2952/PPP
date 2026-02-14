@@ -50,6 +50,8 @@ clang++ -std=c++23 -Iinclude "chapter <chapter_number>/<file_name>.cpp" -o <outp
 
 Remember to replace `<chapter_number>`, `<file_name>`, and `<output_file_name>` with the appropriate values.
 
+For bulding you can use VS code tasks and just press, while the file you want to build is opened, `Cmd + shift + b` on MacOS or `Ctrl + shift + b` on Windows.
+
 ### Example
 
 To compile `exercise 1.cpp` from `chapter 1` and create an executable named `exercise1`, you would run the following command:

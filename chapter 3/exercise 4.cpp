@@ -11,7 +11,7 @@ int main()
     double smallest = 0;
     double average = 0;
 
-    for (double dist; cin >> dist)
+    for (double dist; cin >> dist;)
     {
         dists.push_back(dist);
     }
@@ -32,6 +32,11 @@ int main()
     }
 
     average /= 2;
+
+    cout << "The biggest distance is: " << biggest << '\n';
+    cout << "The smallest distance is: " << smallest << '\n';
+    cout << "The sum of all distances is: " << sum << '\n';
+    cout << "The average of all distances is: " << average << '\n';
 
     return 0;
 }
