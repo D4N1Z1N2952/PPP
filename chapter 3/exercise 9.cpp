@@ -4,9 +4,9 @@
 
 int main()
 {
-    double last = 2;
+    uint64_t last = 2;
 
-    for (double i = 0; i < 64; i++)
+    for (uint64_t i = 0; i < 64; i++)
     {
         cout << i + 1 << ' ' << last << '\n';
         last *= 2;
@@ -14,4 +14,6 @@ int main()
     
 }
 
-// The maximun numebr you can count with the double type is infinite
+// For 1.000         - 10
+// For 1.000.000     - 20
+// For 1.000.000.000 - 27
